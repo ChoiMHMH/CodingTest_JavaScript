@@ -1,19 +1,14 @@
 function solution(nums) {
-    let arr = {};
-    const count = nums.length/2;
-    let countObj = 0;
+    let obj = {};
+    const max = nums.length/2;
+    let countType = 0;
     
     for(let i of nums){
-        arr[i] = 1;
+        obj[i] = 1;
     }
-    for(let key in arr){
-        countObj += arr[key];
+    for(let key in obj){
+        countType += obj[key];
     }
-    
-    if (count >= countObj){
-        return countObj;
-    }else{
-        return count;
-    }
+    return max >= countType? countType : max;
     
 }
