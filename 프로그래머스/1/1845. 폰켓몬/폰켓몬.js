@@ -6,7 +6,6 @@ function solution(nums) {
         obj[num] = 1;
     });
     
-    console.log(Object.keys(obj))
     let typeCount = Object.keys(obj).length;
     return max >= typeCount ? typeCount : max;
 }
