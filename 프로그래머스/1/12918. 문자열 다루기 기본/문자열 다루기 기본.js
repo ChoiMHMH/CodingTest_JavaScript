@@ -1,8 +1,5 @@
-function solution(s) {
+function solution(s){
+    var regex = /^\d{6}$|^\d{4}$/;
 
-    if(s.length === 4 || s.length === 6){
-        return s.split("").every(c => !isNaN(c)) 
-    } else {
-        return false;
-    }
+  return regex.test(s);
 }
