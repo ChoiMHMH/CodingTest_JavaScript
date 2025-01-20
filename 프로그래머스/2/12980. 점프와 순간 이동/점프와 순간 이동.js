@@ -1,14 +1,18 @@
+// function solution(n) {
+//     let answer = 0;
+
+//     while (n > 0) {
+//         if (n % 2 === 0) {
+//             n /= 2;
+//         } else {
+//             n -= 1;
+//             answer++;
+//         }
+//     }
+
+//     return answer;
+// }
+
 function solution(n) {
-    let answer = 0;
-
-    while (n > 0) {
-        if (n % 2 === 0) {
-            n /= 2;
-        } else {
-            n -= 1;
-            answer++;
-        }
-    }
-
-    return answer;
+    return n.toString(2).replace(/0/g,"").length
 }
