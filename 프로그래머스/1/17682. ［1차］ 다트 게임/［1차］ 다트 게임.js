@@ -2,7 +2,6 @@ function solution(dartResult) {
   // 점수, 보너스, 옵션 추출
   const regex = /(\d{1,2})([SDT])([*#]?)/g;
   const tokens = [...dartResult.matchAll(regex)];
-    console.log(tokens)
   const scores = [];
 
   for (let i = 0; i < tokens.length; i++) {
@@ -17,7 +16,7 @@ function solution(dartResult) {
     // 옵션 처리
     if (option === '*') {
       num *= 2;
-      if (i > 0) scores[i - 1] *= 2; // 이전 점수 2배
+      if (i > 0) scores[i - 1] *= 2; 
     } else if (option === '#') {
       num *= -1;
     }
